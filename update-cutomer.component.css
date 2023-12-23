@@ -1,0 +1,13 @@
+.card{
+    padding:40px;
+    border:1px solid black;
+    width:500px;
+    margin-left: 200px;
+}
+button{
+    width:180px;
+}
+
+#add{
+    margin-right: 50px;
+}

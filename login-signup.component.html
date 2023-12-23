@@ -1,0 +1,89 @@
+<!-- login -->
+<section class="vh-100" *ngIf="!isshow">
+    <div class="container h-100">
+        <div class="row justify-content-center align-item-center h-100">
+            <div class="col-xl-9">
+                <div class="card" style="margin-top:190px">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-6">
+                            <img src="https://image.freepik.com/free-vector/mobile-login-concept-illustration_114360-2650.jpg" class="img-fluid">
+                        </div>
+                        <!-- form -->
+                        <div class="col-md-6 col-lg-l align-item-center">
+                            <div class="card-body p-4 text-black">
+                                <form [formGroup]="loginForm">
+                                    <div class="d-flex align-item-center mb-3 pb-1">
+                                        <i class="fa-solid fa-user-plus mt-2" style="color:orange;font-size: 35px;"></i>
+                                        <h1 style="font-weight: bold;margin-left: 15px;">Login</h1>
+                                    </div>
+                                    <h5 style="margin-bottom: 30px;font-weight: normal;letter-spacing: 1px;">Login Into your Account</h5>
+                                    <div class="form-outline mb-2">
+                                        <label for="email"> Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter your email" formControlName="email">
+                                    </div>
+                                    <div class="form-outline mb-2">
+                                        <label for="password" class="mt-2"> password</label>
+                                        <input type="password" class="form-control" placeholder="Enter password" formControlName="password" >
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn btn-dark mt-2 "  type="button" (click)="loginuser()">Login</button>
+                                    </div>
+                                    <p class="mt-5">Don't Have a account?
+                                    <a  (click)="signUp()" style="font-weight: bold;color:black">Sign Up</a></p>
+                                </form>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- signup -->
+    <section class="vh-100" *ngIf="isshow">
+        <div class="container h-100">
+            <div class="row justify-content-center align-item-center h-100">
+                <div class="col-xl-9">
+                    <div class="card" style="margin-top:190px">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-6">
+                                <img src="https://i.fbcd.co/products/resized/resized-750-500/2207-s-3-online-r-mainpreview-4e41d41e7c9e58a7afaee5eff5dcd6a6bfb99cba728f0c00caaf3c0ffeb1994a.jpg" class="img-fluid" id="sign" >
+                            </div>
+                            <!-- form -->
+                            <div class="col-md-6 col-lg-l align-item-center">
+                                <div class="card-body p-4 text-black">
+                                    <form [formGroup]="signupForm" >
+                                        <div class="d-flex align-item-center mb-3 pb-1">
+                                            <i class="fa-solid fa-user-plus mt-2" style="color:orange;font-size: 35px;"></i>
+                                            <h1 style="font-weight: bold;margin-left: 15px;">Sign Up</h1>
+                                        </div>
+                                        <h5 style="margin-bottom: 30px;font-weight: normal;letter-spacing: 1px;">sign up Into your Account</h5>
+                                        <div class="form-outline mb-2">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+                                        </div>
+                                        <div class="form-outline mb-2">
+                                            <label for="email"> Email</label>
+                                            <input type="email" class="form-control" placeholder="Enter your email" formControlName="email">
+                                        </div>
+                                        <div class="form-outline mb-2">
+                                            <label for="password" class="mt-2"> password</label>
+                                            <input type="password" class="form-control" placeholder="Enter your password" formControlName="password">
+                                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn-dark mt-2 "  type="button" (click)="submitsignup()">Sign Up</button>
+                                        </div>
+                                        <p class="mt-5">Already sign up please
+                                        <a (click)="login()"  style="font-weight: bold;color:black">Login</a></p>
+                                    </form>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>

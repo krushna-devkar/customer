@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="row" style="margin-top: 100px;">
+        <!-- image-section -->
+        <div class="col-sm-4 p-3 ">
+            <div class="image">
+                <img src="https://th.bing.com/th/id/OIP.daaLhaqSj1HcMOqDcBP5HwHaFw?w=579&h=450&rs=1&pid=ImgDetMain">
+            </div>
+        </div>
+
+
+<div class="col-sm-6 p-5 m-4">
+    <div class="card">
+        <h5>Update Customer</h5>
+        <form >
+            <div class="form-group mb-1">
+              <label for="fname">First Name</label>
+              <input type="text" class="form-control" id="fname"  name="fname" [(ngModel)]="customerData.fname" placeholder="Enter first name">
+            </div>
+            <div class="form-group mb-1">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" name="lname" [(ngModel)]="customerData.lname" placeholder="Enter Last name">
+              </div>
+              <div class="form-group mb-1">
+                <label for="phone number">Phone Number</label>
+                <input type="number" class="form-control" id="phone"  name="phone" [(ngModel)]="customerData.phone" placeholder="Enter phone number">
+              </div>
+              <div class="form-group mb-1">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="customerData.email" placeholder="Enter email">
+              </div>
+            <button type="submit" class="btn btn-primary mt-2 " id="add" (click)="update()">Update Customer</button>
+            <button type="submit" class="btn btn-success mt-2 " routerLink="/custmorList">Back</button>
+          </form>
+    </div>
+</div>
+    </div>
+</div>
+

@@ -1,0 +1,50 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-primary">
+<div class="container-fluid">
+    <h1 style="color:white;font-size: 24px;">Customer Mangement System</h1>
+    <div>
+    <button class="btn btn-success" routerLink="/addcutomer" id="add">Add Customer</button>   
+    <button class="btn btn-warning" routerLink="/login" (click)="logout()">Logout</button>
+</div>
+</div> 
+</nav>
+
+<!-- image section -->
+
+<div class="container">
+    <div class="row text-center " style="margin-top: 100px;">
+        <div class="col-sm-5 ">
+            <div class="image">
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v211batch9-bb-37-sale_2.jpg?w=800&dpr=1&fit=default&crop=default&auto=format&fm=pjpg&q=75&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=4a0d2d0d6c751ba2609a2be0d61f98ac" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <th scope="col">First Name</th>
+                      <th scope="col" >Last Name</th>
+                      <th scope="col" >Phone Number</th>
+                      <th scope="col">Email</th>
+                      <th scope="col" >Action</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of data">
+                        <td>{{item.fname}}</td>
+                        <td>{{item.lname}}</td>
+                        <td>{{item.phone}}</td>
+                        <td>{{item.email}}</td>
+                        <td>
+                            <i style="color:green;font-size: 24px;" class="fas fa-edit" routerLink="/updateCustomer/{{item.id}}"></i>&nbsp;
+                            <i style="color:red;font-size: 24px;" (click)="delete(item.id)" class="fas fa-trash"></i>
+                        </td>
+                    </tr>
+                    
+                    
+                  </tbody>
+              </table>
+        </div>
+    </div>
+</div>

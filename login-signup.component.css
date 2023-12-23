@@ -1,0 +1,16 @@
+.img-fluid{
+    height:600px;
+}
+section{
+    background-image:linear-gradient(-225deg , #86bcbc 0% ,#F9FEA5 100%);
+    cursor:pointer;
+}
+
+.card{
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, #20Eee2 0%, #959595);
+}
+
+#sign{
+    height:530px
+}
